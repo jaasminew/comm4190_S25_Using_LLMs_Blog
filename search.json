@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "My Explorations with LLMs",
     "section": "",
-    "text": "An Exploration of the Creativity of LLMs\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nThis blog explores the creativity of LLMs as a tool of ideation.\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\nNo matching items"
+    "text": "An Investigation Into the Creativity of LLMs Through Ideation\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\ncreativity\n\n\nideation\n\n\n\nTesting the strengths and constraints of LLMs ideating capability\n\n\n\n\n\nJan 30, 2025\n\n\nJasmine Wang\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -30,8 +30,29 @@
   {
     "objectID": "posts/001_post1/index.html",
     "href": "posts/001_post1/index.html",
-    "title": "An Exploration of the Creativity of LLMs",
+    "title": "An Investigation Into the Creativity of LLMs Through Ideation",
     "section": "",
-    "text": "An Exploration of the Creativity of LLMs\nThis blog explores the creativity of LLMs as a tool of ideation. Through repeated trials with multiple LLMs, I gained a few insights on how to better leverage in helping us do the project ideation."
+    "text": "Large Language Models (LLMs) have been intensively used in a lot of productivity settings, and they are notably good at data analysis, problem solving, and knowledge retrieval and synthesis. While they are often assumed to be useful for idea generation, their actual strengths and limitations in producing original and feasible ideas remain underexplored.\nDrawing inspiration from research on creativity in Artificial Intelligence tools, I set out to investigate LLMs’ capabilities in creative idea generation through a human-machine collaborative ideation session. Through multiple experiments, I aim to understand which collaborative role played by LLM is the most effective and inspring in the ideation setting.\n\n\nFor the experiments, I will be testing a mix of models to compare their capabilities, biases, and effectiveness in different ideation roles.\n\nGPT-4 (OpenAI)\nClaude 3 (Anthropic)\nDeepSeek-V2 (DeepSeek AI)\n\n\n\n\nTo break down LLMs’ contributions to idea generation, I categorize their roles into Generator, Prompter, and Refiner.\n\nThe Generator role puts the LLM in the driver’s seat, allowing it to take full control of idea creation with minimal human input.\nThe Prompter role flips the dynamic, positioning the LLM as a guide that stimulates human creativity by posing thought-provoking questions and suggestions.\nThe Refiner role focuses on polishing and enhancing existing ideas given by human, helping to improve clarity, coherence, and feasibility.\n\nBy testing these roles across different models, I aim to uncover which approach is the most effective in a collaborative ideation setting.\n\n\n\nThe base prompt:\nMany founders in the Wharton School have great technical skills but lack design input in their founder teams. This generates needs for high-quality product design and graphic design. Please help me generate a tool"
+  },
+  {
+    "objectID": "posts/001_post1/index.html#the-models-im-testing-with",
+    "href": "posts/001_post1/index.html#the-models-im-testing-with",
+    "title": "An Investigation Into the Creativity of LLMs Through Ideation",
+    "section": "",
+    "text": "For the experiments, I will be testing a mix of models to compare their capabilities, biases, and effectiveness in different ideation roles.\n\nGPT-4 (OpenAI)\nClaude 3 (Anthropic)\nDeepSeek-V2 (DeepSeek AI)"
+  },
+  {
+    "objectID": "posts/001_post1/index.html#llm-collaborative-roles-in-human-machine-collaboration",
+    "href": "posts/001_post1/index.html#llm-collaborative-roles-in-human-machine-collaboration",
+    "title": "An Investigation Into the Creativity of LLMs Through Ideation",
+    "section": "",
+    "text": "To break down LLMs’ contributions to idea generation, I categorize their roles into Generator, Prompter, and Refiner.\n\nThe Generator role puts the LLM in the driver’s seat, allowing it to take full control of idea creation with minimal human input.\nThe Prompter role flips the dynamic, positioning the LLM as a guide that stimulates human creativity by posing thought-provoking questions and suggestions.\nThe Refiner role focuses on polishing and enhancing existing ideas given by human, helping to improve clarity, coherence, and feasibility.\n\nBy testing these roles across different models, I aim to uncover which approach is the most effective in a collaborative ideation setting."
+  },
+  {
+    "objectID": "posts/001_post1/index.html#experiments-with-llms",
+    "href": "posts/001_post1/index.html#experiments-with-llms",
+    "title": "An Investigation Into the Creativity of LLMs Through Ideation",
+    "section": "",
+    "text": "The base prompt:\nMany founders in the Wharton School have great technical skills but lack design input in their founder teams. This generates needs for high-quality product design and graphic design. Please help me generate a tool"
   }
 ]
