@@ -5,4 +5,4 @@ about:
   template: jolla
 ---
 
-About this blog
+Push the boundary of LLMs in the realm of creativity.
