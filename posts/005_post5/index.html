@@ -166,6 +166,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="standardize-the-idea-generation-process" class="level1">
 <h1>Standardize the idea generation process</h1>
 <p><img src="hero-img.jpg" class="img-fluid"></p>
+<section id="the-design-thinking-method" class="level2">
+<h2 class="anchored" data-anchor-id="the-design-thinking-method">The Design Thinking Method</h2>
+<p>Every creative process follows a pattern. The renowned design agency IDEO was instrumental in evangelizing this Design Thinking method, a method now widely used by creative agencies and tech companies during the design stage. This approach helps break down any seemingly intricate problems into solvable steps.</p>
+<p>Therefore, when trying to standardize the idea generation process, I brought back this classic technique. As an ideation tool, this product currently does not include the prototype and test phases. However, the steps of empathize, define, and ideate can be effectively replicated within an LLM. By incorporating Artificial Intelligence, I want to see it bring in its own strengths and empower humans to ideate more wisely. <img src="Design-thinking.png" class="img-fluid"></p>
+</section>
 <section id="experimentation-with-different-approaches" class="level2">
 <h2 class="anchored" data-anchor-id="experimentation-with-different-approaches">Experimentation with different approaches</h2>
 <p>To start with, I explored different possible templates for ideating. To test their effectiveness, I used the same prompt to initiate an ideating process and compared the quality of various ideas across different trial runs.</p>
@@ -182,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Details need human input to build up:</strong> GPT is good at solving challenges. Specific, detailed ideas came up the fastest when I described my vision and left GPT determine how to achieve it.</li>
 <li><strong>Repetitive ideas still exist:</strong> Another factor contributing to the lengthy responses was the repetition of ideas. Real-time evaluation is crucial to prevent non-valuable ideas from reappearing in subsequent responses.</li>
 </ul>
-<p><img src="GPT-response1.png" class="img-fluid"> <img src="GPT-response2.png" class="img-fluid"></p>
+<p><img src="GPT-response1.png" class="img-fluid"></p>
 </section>
 <section id="solution-2-attributes-driven-ideating" class="level3">
 <h3 class="anchored" data-anchor-id="solution-2-attributes-driven-ideating">Solution 2: Attributes-driven ideating</h3>
@@ -219,10 +224,29 @@ ul.task-list li input[type="checkbox"] {
 <section id="solution-4-imagenary-customer-prompted-ideating" class="level3">
 <h3 class="anchored" data-anchor-id="solution-4-imagenary-customer-prompted-ideating">Solution 4: Imagenary-customer-prompted ideating</h3>
 <p>Ask GPT to take on the perspective of customers and generate hypothetical feedback on the product. Use this feedback as inspiration to refine existing ideas or develop new ones.</p>
+<p>Added prompt: &gt; I want you to do the following: put yourself in the shoes of 18-35 years old female consumers and generate 5 customer feedback on the product. Using this feedback, summarize the pain point and its root cause. Then, based on each point, briefly explain the reason and your suggested directions to solve them. At this stage, the suggested directions don’t have to be detailed and very specific.</p>
+<p>Talking to customers and gathering their feedback is always the first step in brainstorming. Here, I experimented with using LLMs to generate hypothetical customer feedback and then prompted it to respond to its own feedback with potential solutions.</p>
+<p>The advantage of this approach is that ideation begins with a clear direction, and the ideas generated are more likely to resonate with customers since they directly address pain points. To explore root causes, I used the <strong>“5 Whys”</strong> technique. However, at this stage, the LLM’s ability to apply the “5 Whys” effectively is still quite limited. With further training on instructions and data, this technique could become a valuable tool in identifying pain points during the ideation process.</p>
+<p><img src="GPT-response5.png" class="img-fluid"></p>
+<p>As seen in the conversation, this method allows us to dive into the topic quickly, improving efficiency compared to previous trials that required exploring multiple directions before finding a suitable one. However, the trade-off is that the ideas tend to become <strong>predictable</strong>, as they are solutions that an average person could easily come up with.</p>
+<p>Some insights about the imagenary-customer-prompted ideating:</p>
+<ul>
+<li><strong>More suitable for technical problem statements than creative ones:</strong> Thanks to its ability to pinpoint root causes, this prompting technique is most effective for solving technical problems but falls short when tackling creativity-driven challenges.</li>
+<li><strong>Works best when incorporating other prompting techniques:</strong> The ideas generated are precise and feasible but lack originality. However, this drawback can be effectively addressed by integrating it with interdisciplinary prompting.</li>
+</ul>
 </section>
 </section>
 <section id="combining-different-prompting-approaches" class="level2">
 <h2 class="anchored" data-anchor-id="combining-different-prompting-approaches">Combining different prompting approaches</h2>
+<section id="interdisciplinary-ideating-is-favored-over-attributes-driven-ideating" class="level3">
+<h3 class="anchored" data-anchor-id="interdisciplinary-ideating-is-favored-over-attributes-driven-ideating">Interdisciplinary ideating is favored over attributes-driven ideating</h3>
+</section>
+<section id="transiting-from-qa-to-pickchoose" class="level3">
+<h3 class="anchored" data-anchor-id="transiting-from-qa-to-pickchoose">Transiting from Q&amp;A to pick&amp;choose</h3>
+</section>
+</section>
+<section id="appendix-the-idea-list" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-the-idea-list">Appendix: the idea list</h2>
 
 
 </section>
