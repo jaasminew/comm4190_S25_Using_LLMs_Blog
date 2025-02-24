@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Jasmine Wang">
+<meta name="dcterms.date" content="2025-02-10">
+<meta name="description" content="Inspired by my experiments with LLMs, I set out to build an ideation partner using Open AI API, that helps humans yield better ideation results than a basic idea generator.">
 
-<title>Jasmine’s Explorations with LLMs – My Explorations with LLMs</title>
+<title>Building A Better Ideation Partner 3 – My Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5c67a7444eebc356e54fdce0a63e8750.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5c67a7444eebc356e54fdce0a63e8750.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My Explorations with LLMs</span>
     </a>
   </div>
@@ -149,7 +92,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,296 +115,86 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Jasmine’s Explorations with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Building A Better Ideation Partner 3</h1>
+                  <div>
+        <div class="description">
+          Inspired by my experiments with LLMs, I set out to build an ideation partner using Open AI API, that helps humans yield better ideation results than a basic idea generator.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">product development</div>
+                <div class="quarto-category">creativity</div>
+                <div class="quarto-category">ideation</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Jasmine Wang </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 10, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Y3JlYXRpdml0eQ==">creativity <span class="quarto-category-count">(6)</span></div><div class="category" data-category="aWRlYXRpb24=">ideation <span class="quarto-category-count">(6)</span></div><div class="category" data-category="cHJvZHVjdCUyMGRldmVsb3BtZW50">product development <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="criteria-for-setting-up-an-ideating-environment" class="level1">
+<h1>Criteria for setting up an ideating environment</h1>
+<p>I have been constantly reading papers and materials regarding engaging AI into creative tasks, including <em>Co-intelligence</em> by Ethan Mollick, <em>The Innovation Tournament Handbook</em> by Christian Terwiesch, and <em>Using Large Language Models for Idea Generation in Innovation</em> by Lennart Meincke, Karan Girotra, Gideon Nave, Christian Terwiesch, and Karl T. Ulrich. These resources have provided valuable insights, prompting me to develop my own guidelines for setting up an effective ideation environment.</p>
+<p>Currently, when evaluating LLM-generated output, I rely on subjective judgment, selecting ideas that resonate most with me. However, I’ve realized that to help LLMs better understand the innovation process and the criteria for high-quality ideas, <strong>clearly defined and specialized rules and guidelines</strong> are essential.</p>
+<p>Working with LLMs requires a balance of creativity and logic.</p>
+<p><img src="hero-img.jpg" class="img-fluid"></p>
+<section id="what-can-be-considered-as-a-good-idea" class="level2">
+<h2 class="anchored" data-anchor-id="what-can-be-considered-as-a-good-idea">What can be considered as a GOOD idea?</h2>
+<p>To teach GPT how to generate high-quality ideas, I first categorized AI-generated ideas into <strong>GOOD</strong> and <strong>BAD</strong> groups. Additionally, I created a third category containing <strong>GOOD human-generated</strong> ideas from renowned designers worldwide.</p>
+<p>I compiled the list of human-generated ideas by manually selecting product design concepts created by renowned designers, awarded prestigious design accolades, or achieving notable commercial success.</p>
+<p>For AI-generated ideas, I employed various prompting strategies, including Chain-of-Thought, few-shot prompting, question-inspired prompting, attribute-driven prompting, and design methodology prompting to generate diverse innovative product concepts. Based primarily on subjective judgment, I selected 10 good ideas and 10 bad ideas from a pool of 100 AI-generated ideas.</p>
+<p><img src="idea-list.png" class="img-fluid"></p>
+<p>With GPT’s assistance, I compared these groups to identify key differences. From this analysis, I distilled a list of characteristics unique to high-quality ideas and pinpointed common pitfalls that AI-generated ideas tend to fall into.</p>
+<section id="what-makes-human-generated-idea-unique" class="level3">
+<h3 class="anchored" data-anchor-id="what-makes-human-generated-idea-unique">What makes human-generated idea unique?</h3>
+<p>After comparing ideas from different sources, I found out that those high-quality human-generated ideas still stand out among all ideas.</p>
+<section id="humans-make-connection-explore-linkages-and-metaphors" class="level4">
+<h4 class="anchored" data-anchor-id="humans-make-connection-explore-linkages-and-metaphors">1. Humans make connection: Explore linkages and metaphors</h4>
+</section>
+<section id="humans-feel-appeal-to-emotions" class="level4">
+<h4 class="anchored" data-anchor-id="humans-feel-appeal-to-emotions">2. Humans feel: Appeal to emotions</h4>
+</section>
+<section id="humans-imagine-contextualize-languages" class="level4">
+<h4 class="anchored" data-anchor-id="humans-imagine-contextualize-languages">3. Humans imagine: Contextualize languages</h4>
 
 
+</section>
+</section>
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNcyUyQ3Byb2R1Y3QlMjBkZXZlbG9wbWVudCUyQ2NyZWF0aXZpdHklMkNpZGVhdGlvbg==" data-listing-date-sort="1739145600000" data-listing-file-modified-sort="1740423779840" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="308">
-<div class="thumbnail">
-<p><a href="./posts/006_post6/index.html" class="no-external"></a></p><a href="./posts/006_post6/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/006_post6/hero-img.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/006_post6/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/006_post6/index.html" class="no-external">Building A Better Ideation Partner 3</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/006_post6/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvZHVjdCUyMGRldmVsb3BtZW50'); return false;">
-product development
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y3JlYXRpdml0eQ=='); return false;">
-creativity
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('aWRlYXRpb24='); return false;">
-ideation
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/006_post6/index.html" class="no-external">Inspired by my experiments with LLMs, I set out to build an ideation partner using Open AI API, that helps humans yield better ideation results than a basic idea generator.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/006_post6/index.html" class="no-external">
-<div class="listing-date">
-Feb 10, 2025
-</div>
-<div class="listing-author">
-Jasmine Wang
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ3Byb2R1Y3QlMjBkZXZlbG9wbWVudCUyQ2NyZWF0aXZpdHklMkNpZGVhdGlvbg==" data-listing-date-sort="1738972800000" data-listing-file-modified-sort="1740423779837" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1626">
-<div class="thumbnail">
-<p><a href="./posts/005_post5/index.html" class="no-external"></a></p><a href="./posts/005_post5/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/005_post5/hero-img.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/005_post5/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_post5/index.html" class="no-external">Building A Better Ideation Partner 2</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/005_post5/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvZHVjdCUyMGRldmVsb3BtZW50'); return false;">
-product development
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y3JlYXRpdml0eQ=='); return false;">
-creativity
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('aWRlYXRpb24='); return false;">
-ideation
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/005_post5/index.html" class="no-external">Inspired by my experiments with LLMs, I set out to build an ideation partner using Open AI API, that helps humans yield better ideation results than a basic idea generator.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/005_post5/index.html" class="no-external">
-<div class="listing-date">
-Feb 8, 2025
-</div>
-<div class="listing-author">
-Jasmine Wang
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TExNcyUyQ3Byb2R1Y3QlMjBkZXZlbG9wbWVudCUyQ2NyZWF0aXZpdHklMkNpZGVhdGlvbg==" data-listing-date-sort="1738800000000" data-listing-file-modified-sort="1740423779827" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1108">
-<div class="thumbnail">
-<p><a href="./posts/004_post4/index.html" class="no-external"></a></p><a href="./posts/004_post4/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/004_post4/hero-img.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/004_post4/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_post4/index.html" class="no-external">Building A Better Ideation Partner 1</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/004_post4/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvZHVjdCUyMGRldmVsb3BtZW50'); return false;">
-product development
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y3JlYXRpdml0eQ=='); return false;">
-creativity
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('aWRlYXRpb24='); return false;">
-ideation
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/004_post4/index.html" class="no-external">Inspired by my experiments with LLMs, I set out to build an ideation partner using Open AI API, that helps humans yield better ideation results than a basic idea generator.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/004_post4/index.html" class="no-external">
-<div class="listing-date">
-Feb 6, 2025
-</div>
-<div class="listing-author">
-Jasmine Wang
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2NyZWF0aXZpdHklMkNpZGVhdGlvbg==" data-listing-date-sort="1738454400000" data-listing-file-modified-sort="1740423779826" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="701">
-<div class="thumbnail">
-<p><a href="./posts/003_post3/index.html" class="no-external"></a></p><a href="./posts/003_post3/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/003_post3/hero-img.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/003_post3/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_post3/index.html" class="no-external">An Investigation Into the Creativity of LLMs Through Ideation 3</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/003_post3/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y3JlYXRpdml0eQ=='); return false;">
-creativity
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('aWRlYXRpb24='); return false;">
-ideation
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/003_post3/index.html" class="no-external">Testing the strengths and constraints of LLMs ideating capability</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/003_post3/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2025
-</div>
-<div class="listing-author">
-Jasmine Wang
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2NyZWF0aXZpdHklMkNpZGVhdGlvbg==" data-listing-date-sort="1738368000000" data-listing-file-modified-sort="1740423779818" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="609">
-<div class="thumbnail">
-<p><a href="./posts/002_post2/index.html" class="no-external"></a></p><a href="./posts/002_post2/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/002_post2/hero-img.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/002_post2/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_post2/index.html" class="no-external">An Investigation Into the Creativity of LLMs Through Ideation 2</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/002_post2/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y3JlYXRpdml0eQ=='); return false;">
-creativity
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('aWRlYXRpb24='); return false;">
-ideation
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/002_post2/index.html" class="no-external">Testing the strengths and constraints of LLMs ideating capability</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/002_post2/index.html" class="no-external">
-<div class="listing-date">
-Feb 1, 2025
-</div>
-<div class="listing-author">
-Jasmine Wang
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2NyZWF0aXZpdHklMkNpZGVhdGlvbg==" data-listing-date-sort="1738195200000" data-listing-file-modified-sort="1740423779813" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="897">
-<div class="thumbnail">
-<p><a href="./posts/001_post1/index.html" class="no-external"></a></p><a href="./posts/001_post1/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/001_post1/hero-img.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/001_post1/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_post1/index.html" class="no-external">An Investigation Into the Creativity of LLMs Through Ideation</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/001_post1/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y3JlYXRpdml0eQ=='); return false;">
-creativity
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('aWRlYXRpb24='); return false;">
-ideation
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/001_post1/index.html" class="no-external">Testing the strengths and constraints of LLMs ideating capability</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/001_post1/index.html" class="no-external">
-<div class="listing-date">
-Jan 30, 2025
-</div>
-<div class="listing-author">
-Jasmine Wang
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
