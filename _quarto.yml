@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Creativity in LLMs"
+  title: "Jasmine's explorations of LLMs"
   navbar:
     right:
       - about.qmd
