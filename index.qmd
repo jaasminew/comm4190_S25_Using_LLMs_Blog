@@ -1,5 +1,5 @@
 ---
-title: Jasmine's Explorations with LLMs
+title: Creativity in LLMs
 listing:
   contents: posts
   sort: date desc
