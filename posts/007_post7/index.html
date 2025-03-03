@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Jasmine Wang">
-<meta name="dcterms.date" content="2025-02-08">
-<meta name="description" content="Inspired by my experiments with LLMs, I set out to build an ideation partner using Open AI API, that helps humans yield better ideation results than a basic idea generator.">
 
-<title>Building A Better Ideation Partner 2 – Jasmine’s explorations of LLMs</title>
+<title>Improve the quality of AI-generated ideas – Jasmine’s explorations of LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -116,37 +147,14 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Building A Better Ideation Partner 2</h1>
-                  <div>
-        <div class="description">
-          Inspired by my experiments with LLMs, I set out to build an ideation partner using Open AI API, that helps humans yield better ideation results than a basic idea generator.
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">product development</div>
-                <div class="quarto-category">creativity</div>
-                <div class="quarto-category">ideation</div>
-              </div>
-                  </div>
+      <h1 class="title">Improve the quality of AI-generated ideas</h1>
+                      </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Jasmine Wang </p>
-            </div>
-    </div>
       
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">February 8, 2025</p>
-      </div>
-    </div>
     
       
     </div>
@@ -163,96 +171,66 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="standardize-the-idea-generation-process" class="level1">
-<h1>Standardize the idea generation process</h1>
+<div id="2bd2ab85-104f-4dd9-87b5-4eb4a6909445" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title: <span class="st">"Building A Better Ideation Partner 4"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>description: <span class="st">"Inspired by my experiments with LLMs, I set out to build an ideation partner using Open AI API, that helps humans yield better ideation results than a basic idea generator."</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>author: <span class="st">"Jasmine Wang"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>date: <span class="st">"3/1/2025"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>categories:</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> LLMs</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> product development</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> creativity</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> ideation</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Building on my last post, I compared high-quality human-generated ideas with AI-generated ideas and identified three key areas where standard AI prompting strategies fall short:</p>
+<ul>
+<li>Inability to generate nuanced connections</li>
+<li>Lack of emotional depth and considerations</li>
+<li>Failure to comprehensively account for affordances and constraints</li>
+</ul>
+<p>In this post, I’ll take it a step further—analyzing common prompting pitfalls that may lead to low-quality ideation and using those insights to develop solutions that address these three primary weaknesses of LLMs in ideation.</p>
 <p><img src="hero-img.jpg" class="img-fluid"></p>
-<section id="the-design-thinking-method" class="level2">
-<h2 class="anchored" data-anchor-id="the-design-thinking-method">The Design Thinking Method</h2>
-<p>Every creative process follows a pattern. The renowned design agency IDEO was instrumental in evangelizing this Design Thinking method, a method now widely used by creative agencies and tech companies during the design stage. This approach helps break down any seemingly intricate problems into solvable steps.</p>
-<p>Therefore, when trying to standardize the idea generation process, I brought back this classic technique. As an ideation tool, this product currently does not include the prototype and test phases. However, the steps of empathize, define, and ideate can be effectively replicated within an LLM. By incorporating Artificial Intelligence, I want to see it bring in its own strengths and empower humans to ideate more wisely. <img src="Design-thinking.png" class="img-fluid"></p>
-</section>
-<section id="experimentation-with-different-approaches" class="level2">
-<h2 class="anchored" data-anchor-id="experimentation-with-different-approaches">Experimentation with different approaches</h2>
-<p>To start with, I explored different possible templates for ideating. To test their effectiveness, I used the same prompt to initiate an ideating process and compared the quality of various ideas across different trial runs.</p>
-<p>Here’s my base prompt:</p>
-<blockquote class="blockquote">
-<p>I want to come up with a profitable product idea. You are my partner, an extremely creative entrepreneur who had successfully designed and built many commercial products, to help me to generate the ideas.</p>
-<p>Here’s the context: I want to design a new type of canvas bag (tote bag) that redefine this product. The product will target 18-35 years old female consumers. The “redefine” can be on a design and aesthetic level, functional level, semantic level (ie. carry some special meaning), branding level, or even combining some technology innovations. I want the ideas to be bold and innovative.</p>
-</blockquote>
-<section id="solution-1-question-inspired-ideating" class="level3">
-<h3 class="anchored" data-anchor-id="solution-1-question-inspired-ideating">Solution 1: Question-inspired ideating</h3>
-<p>Ask GPT to generate a set number of thought-provoking questions on a given topic. Users then provide responses, which serve as a secondary input for GPT to generate follow-up questions.</p>
-<p>Added prompt:</p>
-<blockquote class="blockquote">
-<p>I want you to do the following: Ask me 5 thought-provoking questions that you think might be inspiring, formatted in “keywords: questions”. Based on each of my response, you will ask at least 2 follow-up questions. The questions can be about the context, my personal experience, creative process, interdisciplinary fields, or any aspects that you think might help with the idea generation in the context I provided above.</p>
-</blockquote>
-<p>Overall, our conversation followed a structured question-and-answer pattern. After five rounds of Q&amp;A, we successfully developed three high-quality ideas that I’m very satisfied with. By round three, GPT started introducing key keywords that played a crucial role in shaping our final concepts. By round four, a rough idea had already taken form, and we focused on refining it—polishing details, selecting the strongest elements, and discarding others.</p>
-<p>Here are some insights about the question-inspired ideating:</p>
+<section id="where-ai-can-go-wrong" class="level2">
+<h2 class="anchored" data-anchor-id="where-ai-can-go-wrong">Where AI can go wrong</h2>
+<p>More often than not, when I throw a prompt into the chat window to ask AI to generate as many high-quality product ideas as possible, the results are not very ideal. Bad AI-generated ideas usually take shape in the following form:</p>
 <ul>
-<li><strong>The strucutre of follow-up questions + idea suggestions works well:</strong> The quality of ideas significantly improved by round three, when quick suggested ideas were provided alongside the questions. More than half of my ideas were sparked by keywords in GPT’s responses. This suggests that incorporating suggested directions as helper text within the Q&amp;A structure could further enhance the ideation process.</li>
-<li><strong>Keywords are more valuable than sentences:</strong> I realized that our Q&amp;A process was unnecessarily long, making it inefficient in terms of both time and computing power. Many responses contained “filler” sentences that weren’t directly relevant to the core ideas. Instead, a few keywords or concise sentences would be sufficient for each point.</li>
-<li><strong>Details need human input to build up:</strong> GPT is good at solving challenges. Specific, detailed ideas came up the fastest when I described my vision and left GPT determine how to achieve it.</li>
-<li><strong>Repetitive ideas still exist:</strong> Another factor contributing to the lengthy responses was the repetition of ideas. Real-time evaluation is crucial to prevent non-valuable ideas from reappearing in subsequent responses.</li>
+<li>There’s a lack of diversity, indicated by the fact that 8 out of 10 ideas follow a very similar pattern. “AI-powered” related solutions can be the most common among all. Especially when the conversation goes further with the direction unchanged, new ideas generated become more homogeneous.</li>
+<li>LLMs won’t do much more than combining a few tech buzzwords and form sentences that read well but don’t make much sense in the context of product development. LLMs may come up with ideas that have apparent weaknesses in the implementation stage.</li>
 </ul>
-<p><img src="GPT-response1.png" class="img-fluid"></p>
+<p>As a result, most of my conversations with ChatGPT have been <strong>overly lengthy with limited useful information</strong>. While some of the keywords it introduces can be inspiring, much of the content falls into the realm of uninspired, repetitive ideas—things an average person could easily think of.</p>
+<p>Given that LLM responses are highly adaptable to prompts, my goal is to use prompt engineering to amplify its strengths in productivity while improving its weakness in diversity, ultimately creating a more effective ideation environment.</p>
 </section>
-<section id="solution-2-attributes-driven-ideating" class="level3">
-<h3 class="anchored" data-anchor-id="solution-2-attributes-driven-ideating">Solution 2: Attributes-driven ideating</h3>
-<p>Ask GPT to identify a set number of primary attributes or components of a given product. Then, prompt it to add, remove, or modify the connections between these attributes to generate new product ideas.</p>
-<p>Added prompt:</p>
-<blockquote class="blockquote">
-<p>I want you to do the following: Identify a set number of (both external and internal) attributes or components of canvas bag. Later in our conversation, I’ll prompt you to identify the links between those attributes or components, and generate innovative ideas by modifying, adding, or removing those links.</p>
-<p>For example, primary attributes or components of a pizza include ingredients, flavor, size, temperature, price, packaging, and brand.</p>
-</blockquote>
-<p>Once I got the list of attributes, I sent out a more specific instructions on how to add, remove, and motify the product configuration chart.</p>
-<blockquote class="blockquote">
-<p>Now I want you to: 1. Combine seemingly unrelated attributes, such as shape × branding or material × cultural and social meaning. For each pair, write a short paragraph explaining how these attributes might interact in a unique way. 2. Remove attributes that seem essential or question underlying assumptions. For example, does the material have to be canvas? Can branding exist without any visible logos or signals? 3. Change the nature of certain connections and reinterpret their meanings. For each part, generate five distinct suggestions with clear explanations. Once we have these, we’ll work together to refine and explore some of them in greater depth.</p>
-</blockquote>
-<p>The ideas generated using these prompts turned out to be <strong>bolder and more unconventional</strong>, but also <strong>less realistic</strong> and harder to implement with current materials and technology.</p>
-<p><img src="GPT-response2.png" class="img-fluid"></p>
-<p>Some insights about the attributes-driven ideating:</p>
+<section id="starting-with-problems" class="level2">
+<h2 class="anchored" data-anchor-id="starting-with-problems">Starting with problems</h2>
+<p>Since there are thousands of ways to talk to an LLM, I decided to modify my prompting strategy based on the problems.</p>
+<section id="generate-more-nuanced-connections" class="level4">
+<h4 class="anchored" data-anchor-id="generate-more-nuanced-connections">Generate more nuanced connections</h4>
+<p>Mindmap is by far the most prevalent and effective way for ideation. It’s adopted by a lot of renowned designers such as David M. Kelley and Naoto Fukasawa. The core of creating a mind map lies in <strong>building connections</strong>—linking ideas, concepts, and themes in a way that fosters structured yet flexible thinking.</p>
+<p>In a mind map, ideas emerge from interconnected concepts, forming a web of relationships that guide creative exploration. At first, the process starts with a central theme or problem statement, from which branches extend outward, each representing a related subtopic, attribute, or question. As new connections are made, the combination of different elements leads to unexpected insights—merging disciplines, reframing assumptions, or introducing unconventional perspectives. As the central theme became more divergent, creative ideas are formed from these connections.</p>
+<p><img src="mindmap.png" class="img-fluid"></p>
+<p>However, forming nuanced connections remains a significant challenge for Large Language Models. While LLMs excel at generating surface-level associations or interpreting links between seemingly unrelated concepts, they struggle to create <strong>deep, meaningful connections</strong>—especially when relying on standard prompting techniques.</p>
+<p>Following this track, I decided to change my prompting strategies. After exploration, I have figured out several solutions (in this example, I use “travel” as the central theme):</p>
 <ul>
-<li><strong>Balancing the originality and feasibility:</strong> Attribute-driven ideation allows LLMs to fully leverage their creativity by combining seemingly incompatible aspects. However, this prompting strategy can be tricky to use, as many generated ideas may be impractical and ultimately deemed non-valuable by the prompter. To solve this problem, attributes-driven ideating needs to be used <em>cautiously</em> along with the question-inspired ideating.</li>
-<li><strong>Less user input is needed:</strong> Compared to question-inspired prompting strategy, attributes-driven ideating requires less human input. This implies a lower cognitive load for users, while also introduces more uncertainty as there is less human oversight in guiding the ideas.</li>
+<li><p>Using Chain-Of-Thought(COT) approach to guide LLMs through the steps &gt; We are brainstorming a mindmap around the word ‘travel.’ I want you to follow these steps: &gt; 1. Immediate associations (the common ones). &gt; 2. Synonyms and related concepts from various domains (literature, pop culture, psychology, technology, etc.). &gt; 3. Metaphorical or figurative meanings of ‘travel’ (mental journeys, historical journeys, spiritual journeys). &gt; 4. Less obvious connections that might feel unconventional or abstract. &gt; &gt; After listing these, please combine them into a structured mindmap that shows the relationships among all these levels.</p></li>
+<li><p>Using directed role-play or perspectives &gt; Imagine you are: &gt; • A poet writing about the idea of ‘travel’ &gt; • A child experiencing travel for the first time &gt; • An environmentalist worried about the impact of travel &gt; • A historian reflecting on ancient travel routes &gt; • A science fiction writer imagining interstellar travel &gt; &gt; Please provide the key concepts or phrases each of these personas might bring up. Organize your output into a mindmap format with each persona as a main branch.</p></li>
+<li><p>Asking for explanations of each connection &gt; Generate a list of 10 nuanced, less obvious concepts related to ‘travel,’ and explain the connection for each. For instance, if you mention ‘Polaroids,’ explain how it symbolizes instant but ephemeral memories, capturing fleeting moments during travel. Please present these in a mindmap structure with short explanations.</p></li>
+<li><p>Using metaphorical and conceptual analogies &gt; Consider ‘travel’ as a metaphor. Think about what traveling represents in art, music, personal growth, technology, and spirituality. For each domain, list nuanced ways ‘travel’ might be understood or expressed. Organize these connections into a mindmap with each domain as a separate branch</p></li>
+<li><p>Using constraint-based creative challenges &gt; Brainstorm concepts tied to each sense—what does travel taste like, sound like, etc. For each sense, come up with an associated concept that is intriguing or unconventional. Explain why it’s related.</p></li>
+<li><p>Encouraging self-reflection or critique &gt; Generate 15 concepts related to ‘travel.’ Next, pick the top 5 that might seem too generic or superficial, and transform them into more nuanced, interesting connections. Reorganize these refined ideas into a final mindmap.</p></li>
 </ul>
 </section>
-<section id="solution-3-interdisciplinary-ideating" class="level3">
-<h3 class="anchored" data-anchor-id="solution-3-interdisciplinary-ideating">Solution 3: Interdisciplinary ideating</h3>
-<p>Ask GPT to generate moderately relevant interdisciplinary subjects and topics. Then, prompt it to strategically merge concepts from different domains, providing inspiration for humans to develop new ideas.</p>
-<p>Added prompt:</p>
-<blockquote class="blockquote">
-<p>I want you to do the following: Generate 10 moderately relevant interdisciplinary topics centered around culture, creativity, art, and Gen Z personality expression. Then, strategically merge each concept with canvas bags (tote bags) to create innovative product ideas.</p>
-<p>For each idea, provide a short paragraph explaining how the concepts integrate and how they generate business value.</p>
-</blockquote>
-<p>Ideating with LLMs is a process of fine-tuning the model’s output to align ideas more closely with your desired direction. Encouraging LLMs to generate loosely relevant keywords has proven highly effective. I typically select 2–3 keywords from each idea and prompt the model to elaborate only on those details. This approach functions like <strong>a funnel</strong>, gradually narrowing broad concepts into specific, niche ideas.</p>
-<p>The format of each response wasn’t fully settled. But the structure of <strong>“incorporating topics” + “concepts” + “business values”</strong> proved to be a helpful and comprehensive format. Currently, LLM still tends to wrap more-than-needed details and options in its response, which can easily lead to <strong>information overload</strong>. Controlling the amount of information released and ensuring that only the most useful insights are presented is one of the major challenges.</p>
-<p><img src="GPT-response3.png" class="img-fluid"> <img src="GPT-response4.png" class="img-fluid"></p>
-<p>Some insights about the interdisciplinary ideating:</p>
-<ul>
-<li><strong>This approach is effective only when interdisciplinary concepts align with the intended scope:</strong> Concept merge can be very arbitrary, and most arbitraty ideas are not of high value. Setting clear path for LLMs to follow is a necessary step early in the ideating session.</li>
-<li><strong>Responses are easier to control than attributes-driven approach:</strong> Similar to the previous approach, interdisciplinary ideation requires relatively less human input, primarily involving the selection and integration of independent concepts. However, responses generated through this method are more likely to be relevant and implementable, as long as a proper direction has been established.</li>
-</ul>
 </section>
-<section id="solution-4-imagenary-customer-prompted-ideating" class="level3">
-<h3 class="anchored" data-anchor-id="solution-4-imagenary-customer-prompted-ideating">Solution 4: Imagenary-customer-prompted ideating</h3>
-<p>Ask GPT to take on the perspective of customers and generate hypothetical feedback on the product. Use this feedback as inspiration to refine existing ideas or develop new ones.</p>
-<p>Added prompt:</p>
-<blockquote class="blockquote">
-<p>I want you to do the following: put yourself in the shoes of 18-35 years old female consumers and generate 5 customer feedback on the product. Using this feedback, summarize the pain point and its root cause. Then, based on each point, briefly explain the reason and your suggested directions to solve them. At this stage, the suggested directions don’t have to be detailed and very specific.</p>
-</blockquote>
-<p>Talking to customers and gathering their feedback is always the first step in brainstorming. Here, I experimented with using LLMs to generate hypothetical customer feedback and then prompted it to respond to its own feedback with potential solutions.</p>
-<p>The advantage of this approach is that ideation begins with a clear direction, and the ideas generated are more likely to resonate with customers since they directly address pain points. To explore root causes, I used the <strong>“5 Whys”</strong> technique. However, at this stage, the LLM’s ability to apply the “5 Whys” effectively is still quite limited. With further training on instructions and data, this technique could become a valuable tool in identifying pain points during the ideation process.</p>
-<p><img src="GPT-response5.png" class="img-fluid"></p>
-<p>As seen in the conversation, this method allows us to dive into the topic quickly, improving efficiency compared to previous trials that required exploring multiple directions before finding a suitable one. However, the trade-off is that the ideas tend to become <strong>predictable</strong>, as they are solutions that an average person could easily come up with.</p>
-<p>Some insights about the imagenary-customer-prompted ideating:</p>
-<ul>
-<li><strong>More suitable for technical problem statements than creative ones:</strong> Thanks to its ability to pinpoint root causes, this prompting technique is most effective for solving technical problems but falls short when tackling creativity-driven challenges.</li>
-<li><strong>Works best when incorporating other prompting techniques:</strong> The ideas generated are precise and feasible but lack originality. However, this drawback can be effectively addressed by integrating it with interdisciplinary prompting.</li>
-</ul>
+<section id="results-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="results-comparison">Results comparison</h2>
+<p>Using standard prompt strategy, the keywords generated are very generic:</p>
+<p><img src="standard-prompting.png" class="img-fluid"></p>
+<p>However, after combining the modified prompting strategies, the keywords generated are much more creative and thought-provoking:</p>
+<p><img src="modified-prompting.png" class="img-fluid"></p>
+<p>In the next post, I’ll work on more prompting strategies to address another problem of LLMs in ideation: <strong>lack of emotional depth and considerations</strong>.</p>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
