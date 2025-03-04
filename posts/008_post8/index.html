@@ -183,6 +183,110 @@ ul.task-list li input[type="checkbox"] {
 <section id="prompting-ai-to-achieve-the-result" class="level2">
 <h2 class="anchored" data-anchor-id="prompting-ai-to-achieve-the-result">Prompting AI to achieve the result</h2>
 <p>Having these insights in mind, I started working on prompt engineering. I first came up with prompting approaches one by one, and tried to combine them to form a comprehensive prompt that guides the LLM through various phases, including generating painpoints, refining them emotionally, and ensuring they address specific emotional needs or user pains.</p>
+<p>Like what I did in the last post, I came up with some prompting strategies one by one, and integrated them strategically to form a comprehensive prompt:</p>
+<ul>
+<li>Prompting the LLM to identify core emotions behind the problem</li>
+</ul>
+<blockquote class="blockquote">
+<p>Identify the core emotion(s) behind the problem: - What feelings (e.g., anxiety, longing, excitement) do people experience? - Why do these emotions arise?</p>
+</blockquote>
+<ul>
+<li>Using “Five whys”</li>
+</ul>
+<blockquote class="blockquote">
+<ol type="1">
+<li>State the problem. Then, repeatedly ask “Why?”:</li>
+</ol>
+<ul>
+<li>1st “Why?” peels back the immediate cause.</li>
+<li>2nd “Why?” clarifies the underlying situation.</li>
+<li>3rd “Why?” moves closer to emotional drivers.</li>
+<li>…continue until you uncover a more profound emotional truth or universal human desire.</li>
+</ul>
+<ol start="2" type="1">
+<li>Summarize the deep emotional insight uncovered.</li>
+</ol>
+</blockquote>
+<ul>
+<li>Focusing on the holistic user experience, including what users see, feel, think, and do</li>
+</ul>
+<blockquote class="blockquote">
+<ol type="1">
+<li><p>Define the user persona: their environment, goals, and any known pain points.</p></li>
+<li><p>Empathy map questions:</p></li>
+</ol>
+<ul>
+<li>THINK &amp; FEEL: What are they worried about, excited about, or fearful of?</li>
+<li>SEE: What does their environment look like? What cues affect them emotionally?</li>
+<li>HEAR: What do friends, family, or media tell them?</li>
+<li>SAY &amp; DO: How do they outwardly express their feelings, and what actions do they take?</li>
+<li>PAINS: What frustrations or difficulties are they facing?</li>
+<li>GAINS: What would relief, success, or emotional satisfaction look like?</li>
+</ul>
+</blockquote>
+<ul>
+<li>Encouraging LLMs to incorporate little twist of surprise, quirk, or abnormality that sparks joy and makes design feel extra special</li>
+</ul>
+<blockquote class="blockquote">
+<ol type="1">
+<li>Identify the standard design approach or “norm” for a product type.</li>
+<li>Pinpoint a subtle, playful twist that could surprise and delight the user.</li>
+</ol>
+<ul>
+<li>It could be an unexpected animation, a tactile feature, or a playful way of providing feedback.</li>
+</ul>
+<ol start="3" type="1">
+<li>Evaluate how that moment of delight aligns with the emotional core previously identified.</li>
+</ol>
+</blockquote>
+<ul>
+<li>Focusing the brainstorming on mental models, heuristics, and typical behaviors that make solutions feel natural</li>
+</ul>
+<blockquote class="blockquote">
+<ol type="1">
+<li>List key human habits and heuristics relevant to the domain.</li>
+</ol>
+<ul>
+<li>e.g., people prefer consistency; they find comfort in routines; they like quick visual feedback.</li>
+</ul>
+<ol start="2" type="1">
+<li>Brainstorm how the solution can integrate with or leverage these habits.</li>
+</ol>
+<ul>
+<li>e.g., a new feature that builds off an existing daily routine so users don’t have to consciously learn something new.</li>
+</ul>
+<ol start="3" type="1">
+<li>Highlight where emotional resonance meets usability.</li>
+</ol>
+<ul>
+<li>e.g., how does this habit-based design reduce frustration or add an element of comfort?</li>
+</ul>
+</blockquote>
+<ul>
+<li>Identifying negative emotionalities and turning them into positive feelings</li>
+</ul>
+<blockquote class="blockquote">
+<p>Identify 2–3 commonly negative or taboo perceptions or frustrations that might arise in this context. Then offer short suggestions for how they could be flipped into something playful, intriguing, or surprisingly positive. (e.g., turning ‘anxiety about deadlines’ into ‘fun countdown rituals’). Focus on concise, open-ended prompts that invite a human designer to explore</p>
+</blockquote>
+<section id="master-prompt" class="level3">
+<h3 class="anchored" data-anchor-id="master-prompt">Master prompt</h3>
+<ol type="1">
+<li><p>Context &amp; Objectives “You are a design consultant specializing in emotionally resonant product innovation. Our aim is to explore new [product/service/feature] directions addressing [briefly describe the problem context]. We want to spark concepts that speak to emotional needs, feel intuitive, and introduce a delightful twist—especially by flipping negative associations into something intriguing or playful. Avoid fully detailed solutions; instead, give short, creative pointers.”</p></li>
+<li><p>Emotional Seeds “Identify 3–5 core emotional root causes that lead to the problem. What feelings (e.g., anxiety, longing, excitement) do people experience? Why do these emotions arise? Present them as bullet points with brief explanations (e.g., ‘fear of letting others down,’ ‘need for recognition’).”</p></li>
+<li><p>Habit &amp; Heuristic Alignment “ List key human habits and heuristics relevant to the domain. (e.g., people prefer consistency; they find comfort in routines; they like quick visual feedback.) Then brainstorm directions of how the solution can integrate with or leverage these habits. (e.g., a new feature that builds off an existing daily routine so users don’t have to consciously learn something new.)”</p></li>
+<li><p>Delightful Subversion “Identify 2–3 commonly negative or taboo perceptions or frustrations that might arise in this context. Then offer short suggestions for how they could be flipped into something playful, intriguing, or surprisingly positive. (e.g., turning ‘anxiety about deadlines’ into ‘fun countdown rituals’). Focus on concise, open-ended prompts that invite a human designer to explore.”</p></li>
+<li><p>Generate Directions (Not Full Solutions) “Propose 3–5 conceptual ‘directions’ (just short phrases or quick bullet points) that combine elements from the emotional seeds, empathy map, habits, and delightful subversion. Keep these directions open-ended—enough to spark ideas, but without detailing exactly how to implement them.”</p></li>
+<li><p>Refine &amp; Inspire “Conclude by highlighting which direction(s) might carry the strongest emotional resonance or the most intriguing ‘delightful subversion.’ Offer a few inspiring questions or next-step prompts (not instructions) for the human to reflect on or build upon. Avoid prescribing a final design—just offer creative nudges.”</p></li>
+</ol>
+</section>
+</section>
+<section id="results-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="results-comparison">Results comparison</h2>
+<p>With standard prompting strategies, the product ideas tend to be more generic and abstract. Additionally, they are often fully fleshed out, leaving little room for human collaboration and iterative refinement.</p>
+<p><img src="standard-prompting-result.png" class="img-fluid"></p>
+<p>However, with the modified master prompt, the ideation process unfolds <strong>step by step</strong>, generating more nuanced solutions that create opportunities for human input and creative expansion.</p>
+<p><img src="emotional-prompting-result.png" class="img-fluid"></p>
+<p>In the next post, I’ll be discussing prompting strategies that enable LLMs to comprehensively understand the affordances and constraints of products.</p>
 
 
 </section>
