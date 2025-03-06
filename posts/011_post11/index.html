@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jasmine Wang">
-<meta name="dcterms.date" content="2025-03-06">
-<meta name="description" content="Inspired by my experiments with LLMs, I set out to build an ideation partner using Open AI API, that helps humans yield better ideation results than a basic idea generator.">
+<meta name="dcterms.date" content="2025-03-04">
+<meta name="description" content="In order to leverage few-shots prompting in my ideation LLM application, I tried to use Cursor, a AI coding tool, to write a web scraping program to build my idea database.">
 
-<title>Prompt engineering for LLM ideation (WIP) – Jasmine’s explorations of LLMs</title>
+<title>A slight detour: exploring AI coding tool to build AIdeator – Jasmine’s explorations of LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,10 +116,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Prompt engineering for LLM ideation (WIP)</h1>
+      <h1 class="title">A slight detour: exploring AI coding tool to build AIdeator</h1>
                   <div>
         <div class="description">
-          Inspired by my experiments with LLMs, I set out to build an ideation partner using Open AI API, that helps humans yield better ideation results than a basic idea generator.
+          In order to leverage few-shots prompting in my ideation LLM application, I tried to use Cursor, a AI coding tool, to write a web scraping program to build my idea database.
         </div>
       </div>
                           <div class="quarto-categories">
@@ -144,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 6, 2025</p>
+        <p class="date">March 4, 2025</p>
       </div>
     </div>
     
@@ -163,13 +163,29 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="combining-different-prompting-strategies" class="level1">
-<h1>Combining different prompting strategies</h1>
-<p>In the last three posts, I explored different prompting strategies aimed at addressing three major weaknesses of AI-generated ideas. However, these strategies currently feel more independent than interconnected.</p>
-<p>In this post, I’ll explore how to <strong>construct an integrated prompting approach</strong>—one that combines different strategies into a structured, step-by-step process, guiding users through a more cohesive and effective brainstorming experience.</p>
+<section id="ai-coding-tools-are-empowering-non-technical-product-designers" class="level1">
+<h1>AI coding tools are empowering non-technical product designers</h1>
+<p>As part of developing my ideation LLM application, AIdeator, I aim to build a database of high-quality human-generated ideas. My goal is to scrape websites that curate innovative product ideas, focusing on those that have either <strong>gained strong social proof (through public recognition or design awards)</strong> or <strong>achieved notable commercial success</strong>.</p>
+<p>With this in mind, I started with two key sources: * The Kokuyo Design Award, a prestigious Japanese design competition showcasing groundbreaking concepts. * Product Hunt, one of the largest global platforms for discovering and sharing tech product ideas.</p>
+<p>By compiling this dataset, I aim to refine AIdeator’s ideation process, helping it better understand what makes an idea both innovative and viable.</p>
+<p>However, without extensive coding experience, this task could have taken me several days or even a week to complete. But with the help of the AI coding tool, Cursor, I was able to generate the necessary code and successfully complete the task within a day.</p>
+<p>As someone with limited prior knowledge of web scraping, I was genuinely impressed by the capabilities of AI coding tools. This experience has inspired me to leverage AI-assisted coding for the future full-stack development of AIdeator to accelerate the building process and improving efficiency.</p>
 <p><img src="hero-img.jpg" class="img-fluid"></p>
+<section id="interacting-with-cursor" class="level2">
+<h2 class="anchored" data-anchor-id="interacting-with-cursor">Interacting with Cursor</h2>
+<p>I started with asking ChatGPT for help to generate a piece of prompt that lists the details of my requirements.</p>
+<blockquote class="blockquote">
+<p>Write a Python script for web crawling and scraping the Kokuyo Design Award website. The script should extract all awarded product details, including: • Title of the product • Creator name(s) • Description of the product • Evaluation comments (if available) • Images (download and save locally, storing the file path in the table)</p>
+<p>The extracted data should be organized into a structured Pandas DataFrame and exported as a CSV file.</p>
+<p>Additional Requirements: • Use BeautifulSoup or Scrapy for parsing HTML. • Handle pagination if the awards are listed across multiple pages. • If the website uses JavaScript to load content dynamically, use Selenium or Playwright to extract data. • Ensure error handling for missing or inconsistent data. • Save images to a local “images” folder, with filenames corresponding to the product titles. • Include comments in the code explaining each major step.</p>
+<p>At the end, print the first five rows of the extracted data as a preview.</p>
+</blockquote>
+<p>Without the need for manually copying and pasting HTML structures, Cursor can analyze and identify the correct HTML files using only the web link I provide. With just a few conversation turns, it generates a high-level, relatively complete web scraping solution.</p>
+<p><img src="Cursor-1.png" class="img-fluid"></p>
+<p>However, upon reviewing the generated code, I quickly noticed a few obvious mistakes. For instance, Cursor often fails to detect the correct HTML tags for scraping. This still requires manual intervention—I need to inspect the HTML file myself, take a screenshot of the actual structure, and share it in the chat to prevent hallucinations. While AI significantly speeds up the process, human oversight remains essential to ensure accuracy.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
