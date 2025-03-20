@@ -177,17 +177,36 @@ ul.task-list li input[type="checkbox"] {
 <section id="pulling-together-pieces-of-prompts" class="level3">
 <h3 class="anchored" data-anchor-id="pulling-together-pieces-of-prompts">Pulling together pieces of prompts</h3>
 <p>Using the prompt library by Dr.&nbsp;Ethan Mollick as the primary reference, I break the prompt down into several sections: persona, goal, workflow, and reminder. I’ll handle each of them one by one.</p>
-</section>
-</section>
-</section>
-<section id="persona" class="level1">
-<h1>Persona</h1>
+<section id="persona" class="level4">
+<h4 class="anchored" data-anchor-id="persona">Persona</h4>
 <p>According to the paper <em>Prompting Diverse Ideas: Increasing AI Idea Variance</em> by Lennart Meincke, Ethan Mollick, and Christian Terwiesch, which explores how prompt phrasing can enhance the diversity of AI-generated ideas, a couple persona-related prompting strategies ranked pretty high in effectiveness. After refining and integrating these strategies, I assigned the LLM the persona of an “extremely creative entrepreneur.” This section of the prompt now reads as follows:</p>
 <blockquote class="blockquote">
 <p>Persona: You are an extremely creative entrepreneur with a proven track record of developing innovative, profitable products. As my co-founder and ideation partner, your primary mission is to empower me to generate my own high-quality ideas. Rather than simply listing products or solutions, focus on supporting my brainstorming process by offering strategic questions, frameworks, and prompts that spark unconventional thinking. Challenge my assumptions, introduce fresh perspectives, and guide me to explore new angles—while letting me take the lead in discovering the possibilities.</p>
 </blockquote>
+</section>
+<section id="goal" class="level4">
+<h4 class="anchored" data-anchor-id="goal">Goal</h4>
+<p>Sticking with the idea that human will be the dominant idea generator, I decided to move forward with <strong>mindmap</strong> as the core format. It’s one of the most widely used brainstorming techniques and offers the flexibility to adapt to various creative needs. With that in mind, I drafted the following goal for this exercise:</p>
+<blockquote class="blockquote">
+<p>Goal: In this session, we will co-create a brainstorming mindmap focused on a single problem statement at the center. Together, we’ll explore and expand on interconnected concepts, directions, and ideas branching out from that central theme. By combining and refining the various elements in the mindmap, we will ultimately arrive at a set of well-defined product concepts.</p>
+</blockquote>
+</section>
+<section id="workflow-part-1" class="level4">
+<h4 class="anchored" data-anchor-id="workflow-part-1">Workflow (Part 1)</h4>
+<p>This is the most critical part of the prompt, outlining each step the LLM needs to follow to guide users through the brainstorming process. Crafting it requires me to first develop a deep understanding of what an effective human-AI collaborative ideation environment should look like, and then translate that into clear, accurate instructions that effectively guide the LLM’s behavior. Here’s a quick analysis:</p>
+<p><strong>Step 1: user input.</strong> The user will initiate the session with a prompt, outlining the challenge and the target audience. Based on this input, the LLM will refine and transform it into a standardized problem statement that serves as the central theme of the mind map.</p>
+<p><strong>Step 2: refining the scope.</strong> Solving the right problem is the key to ideation. We should always keep in mind that the problem statement suggested by the user might not always be the best one to kick off the brainstorming session. Therefore, it’s the LLM’s responsibility to prompt the user to “step up” the ladder by asking “why”–why do we need to solve this problem? What desirable outcome would result if we solve this problem? This might not be a necessary step, but it’s always beneficial to suggest another possibility when brainstorming.</p>
+<p><strong>Step 3: start creating the mindmap.</strong> As I have explored previously, there are many different ways to create the branches–by coming up with interconnected concepts, tapping into emotional drivers, responding to imaginary customer’s feedback, and so on. Since different techniques are independent yet interconnected, I decided to present them all as options for users, with each method activated by toggling a “switch” based on their brainstorming needs.</p>
+<p><strong>Step 4: elaborating mindmap through constant challenging and iteration.</strong> AI and humans take turns expanding the idea map, with the LLM continuously posing questions about human input or introducing unconventional perspectives to spark deeper thinking and exploration.</p>
+<p><strong>Step 5: product idea finalizing.</strong> Through strategically selecting and integrating concepts (which can be achieved by intuitive and simple interactions such as click, drag and drop), product ideas gradually take shape and evolve.</p>
+<p>In preparation to develop a LLM application, I reimagined this workflow in the context of LangChain.</p>
+<p><img src="langchain.png" class="img-fluid"></p>
+<p>In the next post, I’ll continue refining and developing the prompt.</p>
 
 
+</section>
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
