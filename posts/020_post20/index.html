@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jasmine Wang">
-<meta name="dcterms.date" content="2025-03-31">
+<meta name="dcterms.date" content="2025-04-21">
 <meta name="description" content="After closely investigating Google’s AI tools, I decided to apply those insights to my own AI ideation application. Here’s a brief overview of my reflection.">
 
-<title>Applying human-centered design to AI Ideation Partner – Jasmine’s explorations of LLMs</title>
+<title>Experimenting with smaller LLMs on Ollama – Jasmine’s explorations of LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Applying human-centered design to AI Ideation Partner</h1>
+      <h1 class="title">Experimenting with smaller LLMs on Ollama</h1>
                   <div>
         <div class="description">
           After closely investigating Google’s AI tools, I decided to apply those insights to my own AI ideation application. Here’s a brief overview of my reflection.
@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 31, 2025</p>
+        <p class="date">April 21, 2025</p>
       </div>
     </div>
     
@@ -164,92 +164,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="key-takeaways-from-learn-about-textfx-and-notebooklm" class="level2">
-<h2 class="anchored" data-anchor-id="key-takeaways-from-learn-about-textfx-and-notebooklm">Key takeaways from Learn About, TextFX, and NotebookLM</h2>
-<p>The three products produced by Google AI Labs provided me with so many valuable insights. In this post, I’m going to apply those insights into the design and development of my own LLM application.</p>
-<p><img src="hero-img.jpg" class="img-fluid"></p>
-<section id="a-quick-recap-my-previous-concerns" class="level3">
-<h3 class="anchored" data-anchor-id="a-quick-recap-my-previous-concerns">A quick recap: my previous concerns</h3>
-<p>From my conversations with friends and classmates, I identified a few key challenges faced by this ideation tool:</p>
-<ol type="1">
-<li>It’s difficult to pinpoint very clear and specific user scenarios for the tool.</li>
-<li>The tool doesn’t always deliver consistent value, as the quality of the output can fluctuate, leading users to lose interest quickly.</li>
-<li>Many users struggle to recognize the unique strengths of LLM—-for example, their ability to generate unconventional associations—and thus lack enough motivations to use the tool.</li>
-</ol>
-<p>At this stage, AIdeator is an LLM-powered application designed to generate mind maps that support human collaboration in developing innovative product ideas. It builds out the mind map by expanding branches using a set of pre-defined brainstorming methods, each with clear, structured steps.</p>
-<p>The core structure is promising, but a closer look reveals several unresolved ambiguities. How should I position this product—as a creative booster like TextFX, a practical tool like NotebookLM, or a hybrid of both? Who are the actual users? What specific value are they expecting from the tool? And perhaps most importantly, how should I frame and brand AIdeator so that its purpose and benefits are immediately clear to its target audience?</p>
-</section>
-<section id="reframe-the-product" class="level3">
-<h3 class="anchored" data-anchor-id="reframe-the-product">Reframe the product</h3>
-<p>Based on these queries, I constructed 4 main user scenarios:</p>
-<ol type="1">
-<li>early startup founders use the tool to brainstorm <strong>profitable produce ideas</strong>
-<ol type="1">
-<li>they have relatively clear ideas about market and target customers (input)</li>
-<li>they want profitable, innovative, and feasible product ideas</li>
-<li>initial stage of product development</li>
-<li>desired output: <strong>a clear and well-organized product description documentation</strong> (better with text &amp; images)</li>
-</ol></li>
-<li>individual developers use this tool to come up with their <strong>new personal project ideas</strong>
-<ol type="1">
-<li>they start with a problem statement they want to solve</li>
-<li>they are looking for human-centered, creative, and implementable project ideas with suggested feature listing</li>
-<li>initial stage of product development</li>
-<li>desired output: a clear documentation of product overview, features, (roadmap)</li>
-</ol></li>
-<li>small to medium size companies use this tool to look for <strong>solutions to solve customers’ pain points</strong>
-<ol type="1">
-<li>the brainstorming tool only acts as a <strong>reference list</strong> that helps the team expand their thoughts</li>
-<li>guide the team (without much experience in design) to run innovation tournament and brainstorm innovative solutions</li>
-<li>in the middle of product development stage (usually already with mature products, so more contextual information as input)</li>
-<li>desired output: a clear documentation of problem statement and targeted solutions with suggested implementation strategies</li>
-</ol></li>
-<li>students use this tool to brainstorm their <strong>school/club/personal project</strong> <strong>ideas</strong>
-<ol type="1">
-<li>they are passionate about tech and are looking for creative and feasible project ideas for school and club assignments</li>
-<li>desired output: a clear documentation of project proposal with potential features</li>
-</ol></li>
-</ol>
-<p>After going through the list, I felt that something was slightly off. Then I suddenly noticed a pattern: <strong>not a single real, tangible pain point was addressed in the text</strong>. In other words, these are all things people can already do—-with or without the product. At this stage, the tool feels more like an art piece than a solution that delivers concrete business value.</p>
-<p>Do I want to build a purely creative tool? Probably not. That realization led me to shift my focus toward integrating more utility and practicality into the product, ensuring it not only sparks creativity but also solves real problems and delivers meaningful value to its users.</p>
-<p>Visualizing the product idea? Targeting a proven market demographic? Verifying product–market fit and business value? Or even just helping users generate a list of inspiring product ideas based on past successes? I had a lot of raw ideas swirling in my mind. At this point, I decided to turn to GPT o1 for some fresh suggestions. (Interestingly, I suddenly realized that I’ve become a potential user of my own product!)</p>
-<p>Below, o1 suggested a couple potential directions that I might consider taking. Here’s a sample excerpt.</p>
-<p><img src="o1-answer.png" class="img-fluid"></p>
-<p>After evaluating the effectiveness and feasibility of these insights, I decided to move forward with a few additional features to strengthen the product’s value:</p>
-<ul>
-<li><strong>Market feasibility checks</strong>: As the user brainstorms a product idea, the tool pulls in relevant data (market growth rates, competitor analysis, consumer preferences) so they can see real signals on feasibility.</li>
-<li><strong>Budgeting and feaibility guidance</strong>: The tool will offer rough estimates of financial and technical requirements, linking the idea to real-world constraints and opportunities to help users assess what’s realistically achievable.</li>
-<li><strong>Step-by-Step Implementation Plans</strong>: After an idea is chosen, the tool generates a suggested timeline, key tasks, resource needs, and potential budget ranges.</li>
-</ul>
-</section>
-<section id="embrace-human-centered-design" class="level3">
-<h3 class="anchored" data-anchor-id="embrace-human-centered-design">Embrace human-centered design</h3>
-<p>After dealing with the overall direction, I started diving into the granular details of design. Google’s AI products use a lot of human-centered design principles and always place humans at the forefront. Here I want to also integrate these principles in my product to make it intuitive and user-friendly.</p>
-<section id="guided-freedom-in-brainstorming" class="level4">
-<h4 class="anchored" data-anchor-id="guided-freedom-in-brainstorming">1. Guided freedom in brainstorming</h4>
-<p>Brainstorming is an activity that values autonomy and a sense of control. Users don’t want to feel driven or dominated by AI—-they want to be the idea owner, the one who ultimately arrives at the most brilliant solution. With that in mind, the interface should make it easy and intuitive for users to provide feedback, with distinct visual hierarchy to reinforce that they can always intervene and steer the direction of the brainstorming process.</p>
-<p>Retaining control in the hands of the user can be a delicate balance. It means <strong>controlling the pace and flow of information</strong> while keeping the AI’s presence subtle yet consistently accessible. More specifically, instead of overwhelming users with a large volume of ideas, I aim to limit the number of items to <strong>around seven</strong>—-a number backed by cognitive research as the typical capacity of short-term memory. At the same time, the information density should remain low. Presenting each idea as a keyword or short phrase makes the content feel more digestible and less cognitively demanding, helping users stay focused and in control.</p>
-<p>We can take it a step further by using color or transparency coding to differentiate between AI-generated and human-generated ideas—-ensuring that ideas only become finalized or “solid” once they receive human confirmation. This reinforces the concept of AI as a co-creator, not the decision-maker, keeping creative ownership firmly in the hands of the user.</p>
-</section>
-<section id="creative-touch-and-unexpectedness" class="level4">
-<h4 class="anchored" data-anchor-id="creative-touch-and-unexpectedness">2. Creative touch and unexpectedness</h4>
-<p>Adding creative touches and elements of surprise is also essential, as the tool is inherently a creative product. On a surface level, <strong>color</strong> is a powerful visual cue for creativity—using color coding for consolidated product ideas or adding vibrant highlights to key user interactions can make the UI feel more playful and dynamic.</p>
-<p>Another way to enhance this experience is by allowing users to <strong>adjust the “creativity level” or “wildness”</strong> of the ideas being generated. As we know, different user groups will have different tolerances for novelty versus feasibility. Giving users control over this setting could make the tool feel more adaptable and engaging—almost like a real invention machine that powers and responds to human creativity.</p>
-<p>The amount of information revealed at once also plays a key role in shaping the user’s sense of unexpectedness. Instead of delivering too much too quickly, the tool should generate content gradually, focusing on keywords or short phrases rather than full paragraphs. This keeps the experience dynamic and encourages curiosity as ideas unfold step by step.</p>
-<p>Finally, introducing elements of <strong>randomness</strong> can spark creative breakthroughs. Randomness often leads to unexpected connections. A “shuffle” feature that mixes or swaps concepts, or a “mysterious expansion” branch that adds an entirely out-of-the-box tangent to the current idea, can inject surprise and keep the ideation process feeling fresh and imaginative.</p>
-</section>
-<section id="reduce-friction-along-the-way" class="level4">
-<h4 class="anchored" data-anchor-id="reduce-friction-along-the-way">3. Reduce friction along the way</h4>
-<p>Brainstorming thrives in a frictionless environment, where users’ creativity can flow freely across the space. This means the user experience must be seamless, allowing users to <strong>add, edit, and rearrange ideas at any point without interruption</strong>. To support this, we can enable features like <strong>organic combination, swapping, and replacing of concepts to form new ideas</strong>. In short, the core principle is to make the association between concepts as frictionless as possible.</p>
-</section>
-<section id="the-possibility-of-incorporating-multi-modal-output" class="level4">
-<h4 class="anchored" data-anchor-id="the-possibility-of-incorporating-multi-modal-output">4. The possibility of incorporating multi-modal output</h4>
-<p>In my creative process, visual content is key. Often, a single image of a product prototype can instantly reshape my perception of an idea and significantly elevate its potential. Following that line of thought, I’m planning to experiment with the newly launched OpenAI 4o Image Generation feature. In the next post, I’ll be exploring this tool to see whether it has the potential to enhance and strengthen this product.</p>
 
 
-</section>
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
