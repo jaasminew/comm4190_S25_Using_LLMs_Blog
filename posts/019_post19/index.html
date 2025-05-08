@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-630147fbe0b9ab2b2a517857e522e257.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e36ce5c26c48eccda62d8cde5e438854.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -180,6 +180,30 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <p><strong>TL;DR:</strong> Overall, Manus did a solid job pulling everything together and delivered a detailed travel itinerary as requested. What stood out most, however, was how it performed the task. Manus operated with full autonomy, making decisions on its own without requiring additional input from me. It encountered several errors along the way, but impressively, it was able to handle them independently—finding alternative solutions and adjusting its approach to still achieve the intended outcome.</p>
 <p><img src="manus-output.png" class="img-fluid"></p>
+<p>To illustrate my point, here’s a screenshot of Manus working.</p>
+<p><img src="manus-working.png" class="img-fluid"></p>
+<p>At first glance, it seems like ChatGPT could perform the same task with a similar level of quality as Manus. So that raises an important question: What actually sets an AI agent like Manus apart?</p>
+<p>To explore this, I gave ChatGPT the exact same prompt and observed how it handled the task for comparison.</p>
+<p><img src="gpt-output.png" class="img-fluid"></p>
+<p>Without real-time web search, ChatGPT’s travel itinerary felt more generic. It didn’t include the week’s weather forecast, nor did it reference the popularity of specific attractions.</p>
+<p>Moreover, Manus went a step further by including direct links to booking sites, making the itinerary far more actionable and convenient. Below is an example of a response provided by Manus. It includes important notes that I didn’t even mention in my prompt.</p>
+<p><img src="manus-response.png" class="img-fluid"></p>
+<p>I’m pretty sure that LLMs are capable of producing similar results. However, they require more nuanced and carefully crafted prompting to do so. As a user with limited information on the topic, Manus’s response feels more intelligent, not because the underlying model is necessarily stronger, but because it proactively guides me and empowers me to complete my task more effectively and in greater depth.</p>
+</section>
+<section id="one-more-task" class="level2">
+<h2 class="anchored" data-anchor-id="one-more-task">One more task</h2>
+<p>Last but not least, I gave Manus a task that GPT couldn’t perform:</p>
+<blockquote class="blockquote">
+<p>can you help me book a guided tour for Galleria dell’Accademia di Firenze? if you can look for a guided tour around 50 bucks, go for it. i’d like english tour guide, on 5/11 (sunday) morning, any time from 8-11.</p>
+</blockquote>
+<p>This requires Manus to not only do web search, but also take actions for me. Below is Manus’ response.</p>
+<p><img src="manus-output-2.png" class="img-fluid"></p>
+<p>However, due to some technical limitations, Manus wasn’t able to access the website directly and instead provided me with a link. I followed the link to verify the information, but unfortunately, the details didn’t match up—the price it listed didn’t reflect actual availability. There was no tour guide available for 8–11 AM on 5/11 at around $50—the real options were noticeably more expensive.</p>
+<p><img src="website-result.png" class="img-fluid"></p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Based on my experience using Manus, while it’s capable of executing tasks on behalf of the user, the quality and reliability of those tasks—particularly when they involve taking real-world actions—still feels quite limited. This suggests that, although AI agents like Manus show promise in orchestrating workflows, they are not yet fully dependable for high-stakes or detail-sensitive tasks that require real-time accuracy or transactional precision. In its current state, it feels more like a smart assistant offering suggestions than a true agent executing on my behalf with the level of precision a human would expect.</p>
 
 
 </section>
